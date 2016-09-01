@@ -19,6 +19,11 @@
     - role: influxdb
   tags: influxdb
 
+- name: Install Grafana
+  hosts: monitor
+  roles:
+    - {role: grafana, tags: ['grafana'] }
+
 - name: Install Chronograf
   hosts: monitor
   roles:
